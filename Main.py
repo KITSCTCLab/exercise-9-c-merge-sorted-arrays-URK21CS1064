@@ -8,7 +8,7 @@ def merge(a,m,b,n) :
     for i in range(n):
         bisect.insort(mp, b[i])
     for i in mp:
-        print(i,end=' ')
+        print(i,end=' ')  
         
 # Do not change the following code
 nums1 = []
