@@ -1,16 +1,16 @@
 from typing import List
-import bisect
 def merge(a,m,b,n) :
     
     mp=[]
-    for i in range(m):
-        bisect.insort(mp, a[i])
-    for i in range(n):
-        bisect.insort(mp, b[i])
-    for i in mp:
-        print(i,end=' ')  
+    for i in range(m+1):
+        if (m>i):
+            mp.append(a[i])
+        else:
+            for j in range(n):
+                if (n>j):
+                    mp.append(b[j])
+    print(mp)
         
-# Do not change the following code
 nums1 = []
 nums2 = []
 for item in input().split(', '):
