@@ -1,22 +1,29 @@
-from typing import List
+
 def merge(a,m,b,n) :
     mp=[]
+    if m>n:
+        ch=m
+    else:
+        ch=n
+    flag=0
     if a[0]<b[0]:
-        for i in range(m+1):
+        for i in range(ch+1):
             if (m>i):
                 mp.append(a[i])
-            else:
+            elif (flag==0):
                 for j in range(n):
                     if (n>j):
                         mp.append(b[j])
+                        flag=1
     else:
-        for i in range(n+1):
+        for i in range(ch+1):
             if (n>i):
                 mp.append(b[i])
-            else:
+            elif (flag==0):
                 for j in range(m):
                     if (m>j):
                         mp.append(a[j])
+                        flag=1
     print(mp)
         
 nums1 = []
